@@ -1,38 +1,129 @@
-.App {
-  text-align: center;
+/* 
+    resets
+*/
+*,
+*::after,
+*::before{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html{
+    font-family: 'Poppins', sans-serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body{
+    background: #1b1b1b;
+    color: #808080;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/* 
+    main styling starts here
+*/
+
+/* 
+    header section
+*/
+header{
+    background: #ffa500;
+    color: #1b1b1b;
+    text-align: center;
+    padding: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+/* 
+    scoreboard section
+*/
+.score-board{
+    border: 2px solid #808080;
+    margin: 50px auto;
+    max-width: 250px;
+    text-align: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.score-board span{
+    font-size: 50px;
+    text-align: center;
+    justify-content: center;
+}
+
+#user-label{
+    position: relative;
+    background: #ffa500;
+    width: 50px;
+    color: #1b1b1b;
+    left: -25px;
+    top: 37px;
+}
+
+#comp-label{
+    position: relative;
+    background: #ffa500;
+    width: 60px;
+    color: #1b1b1b;
+    left:  215px;
+    top: -50px;
+}
+
+/* 
+    result section
+*/
+.result{
+    color: #ffa500;
+    font-size: 22px;
+    text-align: center;
+    margin: 5px;
+}
+
+/* 
+    choice secrion
+*/
+
+.choices{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.choice{
+    border: 5px solid #808080;
+    border-radius: 50%;
+    margin: 15px;
+    width: 100px;
+    height: 100px;
+    object-fit: scale-down;
+    cursor: pointer;
+    text-align: center;
+    color: #ffa500;
+}
+
+.choice img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* 
+    action section
+*/
+.action{
+    color: #808080;
+    text-align: center;
+    margin: 25px;
+}
+
+/* 
+    win lose and draw animations
+*/
+.won{
+    border: 5px solid green;
+}
+
+.draw{
+    border: 5px solid #ffa500;
+}
+
+.lost{
+    border: 5px solid red;
 }
